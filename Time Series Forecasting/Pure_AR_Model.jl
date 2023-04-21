@@ -1,4 +1,8 @@
+#Using Houston's dataset in Data_PreProccessing Julia code
+
 #Maximum Temperature Variable only
+
+#ADF Test and PACF/ACF requires Vector of INT64
 #PACF
 pacf_plot_tmax = plot(Forecast.pacf(main_df.TMAX,lag = 25))
 
@@ -7,11 +11,6 @@ acf_plot_tmax = plot(Forecast.acf(main_df.TMAX, lag = 25))
 
 plot(acf_plot_tmax)
 plot(pacf_plot_tmax)
-
-#Creating training and test set for AR Model
-using MLDataUtils
-(x_train_max, y_train_max), (x_test_max, y_test_max) = splitobs((main_df.DAY, main_df.TMAX); at = 0.8) #80-20
-
 
 #AR Model
 using Forecast

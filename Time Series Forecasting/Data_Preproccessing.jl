@@ -21,3 +21,13 @@ main_df =  select(df,[:DATE,:PRCP, :SNOW, :TMAX, :TMIN])
 
 #Adding number of days
 main_df[!, :DAY] =  1.0:nrow(main_df)
+
+#Checking if the time series is stationairty, using ADF Test
+using HypothesisTests
+
+#Stationarity Test ~ ADF
+println(ADFTest(batch_df.TMAX, Symbol("constant"),5))
+
+#Creating training and test set for AR Model
+using MLDataUtils
+(x_train_max, y_train_max), (x_test_max, y_test_max) = splitobs((main_df.DAY, main_df.TMAX); at = 0.8) #80-20

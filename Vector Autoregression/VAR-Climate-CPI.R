@@ -40,5 +40,5 @@ plot(irf_var)
 
 
 #Forecast Error Variance Decomposition
-#fevd <- fevd(var_model_df,n.ahead = 12)
-#plot(fevd)
+fevd <- fevd(var_model_df,n.ahead = 12)
+plot(fevd)

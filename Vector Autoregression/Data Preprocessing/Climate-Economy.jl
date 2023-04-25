@@ -49,3 +49,7 @@ Food_df = select!(Food_df, [:DATES, :Inflation_Rate])
 #combine  CPI economy and climate dataset
 merged_df = innerjoin(reduced_climate_df, Inf_df, on = :DATES)
 merged_food_df = innerjoin(reduced_climate_df, Food_df, on = :DATES)
+
+#save as csv file
+CSV.write("Merged_CPI.csv", merged_df) 
+CSV.write("Merged_Food.csv", merged_food_df) 

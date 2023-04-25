@@ -23,16 +23,16 @@ library('vars')
 library(astsa)
 
 #select best lag length
-#VARselect(CPI_df, lag.max = 15, type ='const')
+VARselect(CPI_df, lag.max = 15, type ='const')
 
 #estimation
 var_model_df <- VAR(CPI_df, p = 6, 
                      type = 'const')
 #Granger Casuality 
-#causality(var_model_df, cause=c("PRCP","SNOW","TMAX","TMIN"))
+causality(var_model_df, cause=c("PRCP","SNOW","TMAX","TMIN"))
 
 #plot(var.model_df)
-#summary(var_model_df)
+summary(var_model_df)
 
 #Orthogonal Impulse Function
 irf_var <- irf(var_model_df,n.ahead = 12, ortho = TRUE)

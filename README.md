@@ -1,4 +1,4 @@
-# Time Series Appraoch
+# Time Series Approach
 2023 Master's Thesis by Kameron Kinast
 
 

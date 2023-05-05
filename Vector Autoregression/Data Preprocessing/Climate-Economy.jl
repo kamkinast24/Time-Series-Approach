@@ -35,8 +35,8 @@ reduced_climate_df = reduced_climate_df[!, [:DATES, :PRCP, :SNOW, :TMAX, :TMIN]]
 
 
 #CPI Economy dataset
-Inf_df = DataFrame(CSV.File("HOU-CPI.csv"))
-Food_df = DataFrame(CSV.File("HOU- Food_CPI.csv"))
+Inf_df = DataFrame(CSV.File("HOU-CPI.csv")) #CPI
+Food_df = DataFrame(CSV.File("HOU- Food_CPI.csv")) #Food-only CPI
 
 #convert to dates
 Inf_df.DATES = Date.(Inf_df.Label, "yyyy u")
@@ -50,6 +50,6 @@ Food_df = select!(Food_df, [:DATES, :Inflation_Rate])
 merged_df = innerjoin(reduced_climate_df, Inf_df, on = :DATES)
 merged_food_df = innerjoin(reduced_climate_df, Food_df, on = :DATES)
 
-#save as csv file
+#save as csv file ~ two different file, one for CPI and one for Food only CPI
 CSV.write("Merged_CPI.csv", merged_df) 
 CSV.write("Merged_Food.csv", merged_food_df) 

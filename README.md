@@ -3,3 +3,7 @@
 
 
 Dataset Folder: the datasets were extracted from the National Center of Enviromental Inforamtion's (NECI's) Climate Data Online (CDO). Each dataset consists of daily observations of climate variables from January 1st, 1950 to December 31st, 2022. Therefore, the datasets are time series data of climate factors. In this folder, it contains five different ariport sites within the United States. 
+
+Time Series Forecasting Folder: four statistical models of time series forecasting with climate datasets in different format of progamming langauge. 
+
+Vector AutoRegressive Folder: Data Pre-Processing and VAR anaylsis using R programming ~ climate, economic, and human health. 

@@ -12,11 +12,9 @@ Vector AutoRegressive Folder:
 
     Inflation Rate = ((Current CPI - Prior CPI)/(Prior CPI)) * 100
 
-Data Pre-Processing: 
+Data Pre-Processing: The storm events datasets are extremely large. Using R programming, the datasets were filtered into only three columns: Dates, the number of Fatalities, and the number of Injuries. 
           
-          The storm events datasets are extremely large. Using R programming, the datasets were filtered into only three columns: Dates, the number of Fatalities, and the number of Injuries. 
+Climate-Economy: The climate dataset is reducing its data resolution to bi-monthly and merging with the economic dataset. CPI and Food-only CPI were created into separate CSV files with the merging of climate datasets. 
           
-          Climate-Economy: The climate dataset is reducing its data resolution to bi-monthly and merging with the economic dataset. CPI and Food-only CPI were created into separate CSV files with the merging of climate datasets. 
-          
-          Climate-Health: The storm event datasets merged with the climate datasets in daily resolution. However, the storm event dataset only records the occurrence of storms, so it expanded into daily resolution. The missing values were replaced with zeros in storm event datasets. 
+Climate-Health: The storm event datasets merged with the climate datasets in daily resolution. However, the storm event dataset only records the occurrence of storms, so it expanded into daily resolution. The missing values were replaced with zeros in storm event datasets. 
     

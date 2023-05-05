@@ -9,7 +9,7 @@ SE_df <- SE_df %>%
   mutate(DATE = lubridate::mdy(BEGIN_DATE))
 
 #Filter to three columns only
-#SE_df<- SE_df %>% select(c('DATE',  'DEATHS_DIRECT', 'INJURIES_DIRECT'))
+SE_df<- SE_df %>% select(c('DATE',  'DEATHS_DIRECT', 'INJURIES_DIRECT'))
 
 #sum all duplciate rows
 SE_df <- SE_df %>% 

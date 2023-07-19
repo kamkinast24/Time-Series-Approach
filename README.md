@@ -1,5 +1,7 @@
 # Time Series Approach
-2023 Master's Thesis by Kameron Kinast
+2023 Master's Thesis
+Quantifying the Nexus of Climate, Economy, and Health: A State-of-the-Art Time Series Approach
+by Kameron B. Kinast
 
 
 Dataset Folder: the datasets were extracted from the National Center of Environmental Information (NECI's) Climate Data Online (CDO). Each dataset consists of daily observations of climate variables from January 1st, 1950, to December 31st, 2022. Therefore, the datasets are time series data of climate factors. This folder contains five different airport sites within the United States. 

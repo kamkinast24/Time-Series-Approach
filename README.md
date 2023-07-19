@@ -1,6 +1,8 @@
 # Time Series Approach
 2023 Master's Thesis
+
 Quantifying the Nexus of Climate, Economy, and Health: A State-of-the-Art Time Series Approach
+
 by Kameron B. Kinast
 
 

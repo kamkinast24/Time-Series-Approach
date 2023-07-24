@@ -19,6 +19,9 @@ df.SNOW = coalesce.(df.SNOW, med_SNOW)
 #filter to precipation, snow, max and min temp only
 main_df =  select(df,[:DATE,:PRCP, :SNOW, :TMAX, :TMIN])
 
+#Mini-batch: last twenty years
+main_df = last(main_df, 7305)
+
 #Adding number of days
 main_df[!, :DAY] =  1.0:nrow(main_df)
 

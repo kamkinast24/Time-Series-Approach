@@ -25,8 +25,11 @@ def split_sequence(series, n_steps):
 # choose a number of time steps
 n_steps = 3
 
+#Mini-batch: last twenty years
+main_df = df.tail(7305)
+
 # split into samples
-X, Y = split_sequence(df['TMAX'].values, n_steps)
+X, Y = split_sequence(main_df['TMAX'].values, n_steps)
 
 
 import torch

@@ -1,5 +1,5 @@
 #Credits to https://learning.oreilly.com/library/view/python-for-finance/9781789618518/92ab89e6-344a-46de-8f98-71c5edcc661a.xhtml
-#Credits to https://subscription.packtpub.com/book/data/9781789618518/10/ch10lvl1sec62/multilayer-perceptrons-for-time-series-forecasting 
+Lewinson, Eryk. Python for Finance Cookbook. Packt Publishing, 2020.
 
 import pandas as pd
 from sklearn import preprocessing

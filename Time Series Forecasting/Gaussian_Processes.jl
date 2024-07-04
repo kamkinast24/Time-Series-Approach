@@ -22,5 +22,5 @@ plot(x_test,μ,ribbon=Σ)
 #Evaluate the model performance
 using MLJ
 
-println(rms(μ_max, y_test)) #RMSE
-println(mae(μ_max, y_test)) #MAE
+println(rms(μ, y_test)) #RMSE
+println(mae(μ, y_test)) #MAE

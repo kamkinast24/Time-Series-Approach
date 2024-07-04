@@ -33,4 +33,4 @@ println(ADFTest(batch_df.TMAX, Symbol("constant"),5))
 
 #Creating training and test set
 using MLDataUtils
-(x_train_max, y_train_max), (x_test_max, y_test_max) = splitobs((main_df.DAY, main_df.TMAX); at = 0.8) #80-20
+(x_train, y_train), (x_test, y_test) = splitobs((main_df.DAY, main_df.TMAX); at = 0.8) #80-20
